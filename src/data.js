@@ -11,7 +11,7 @@ export const profileData = {
 
   brandStatement: "An enthusiastic and adaptable Computer Science student with strong technical and analytical skills, focused on solving real-world problems through innovative technology solutions. Passionate about AI/ML Engineering, continuous learning, and building impactful products through collaborative development.",
 
-  profileImage: "/karan.jpeg",
+  profileImage: "/karan.png",
 
   contact: {
     phone: "+91 7448907020",
