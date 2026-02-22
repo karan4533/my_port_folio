@@ -9,7 +9,7 @@ const AcademicRoles = ({ data }) => {
           <div className="w-12 h-12 rounded-xl bg-purple-600 flex items-center justify-center mr-4 shadow-md">
             <i className="fas fa-university text-white text-xl"></i>
           </div>
-          <h3 className="text-2xl font-bold text-gray-900">Academic Experien</h3>
+          <h3 className="text-2xl font-bold text-gray-900">Academic Experience</h3>
         </div>
         <div className="space-y-3">
           {data.academicExperience.map((exp, index) => (
