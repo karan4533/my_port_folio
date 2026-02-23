@@ -4,7 +4,7 @@ export const profileData = {
   university: "VIT University, Andhra Pradesh",
 
   name: "Karan M.L",
-  title: "M.Tech Integrated Studen",
+  title: "M.Tech Integrated Student",
   designation: "M.Tech Integrated Student",
   departmentName: "Computer Science & Engineering",
   tagline: "AI/ML Enthusiast | Full Stack Developer | Backend Architect | Open Source Builder",
