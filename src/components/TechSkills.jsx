@@ -102,22 +102,24 @@ const TechSkills = ({ techSkills }) => {
 
       {/* Bottom Stats Bar */}
       <div className="mt-6 pt-5 border-t border-gray-100 grid grid-cols-2 sm:grid-cols-4 gap-4">
-        {[
-          { label: "Languages", value: techSkills.find(t => t.category === "Programming")?.skills.length ?? 0, icon: "fas fa-terminal", color: "text-blue-600" },
-          { label: "Frameworks", value: (techSkills.find(t => t.category === "Frontend")?.skills.length ?? 0) + (techSkills.find(t => t.category === "Backend")?.skills.length ?? 0), icon: "fas fa-layer-group", color: "text-violet-600" },
-          { label: "Databases", value: techSkills.find(t => t.category === "Databases")?.skills.length ?? 0, icon: "fas fa-database", color: "text-emerald-600" },
-          { label: "Tools", value: techSkills.find(t => t.category === "Tools & Platforms")?.skills.length ?? 0, icon: "fas fa-tools", color: "text-orange-600" },
-        ].map((stat, i) => (
-          <div key={i} className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 border border-gray-100">
-            <div className={`text-lg ${stat.color}`}>
-              <i className={stat.icon}></i>
+        {techSkills.slice(0, 4).map((cat, i) => {
+          const cfg = categoryConfig[i % categoryConfig.length];
+          return (
+            <div
+              key={i}
+              onClick={() => setActiveCategory(activeCategory === i ? null : i)}
+              className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 border border-gray-100 cursor-pointer hover:shadow-md transition-all duration-200"
+            >
+              <div className={`w-9 h-9 rounded-lg bg-gradient-to-br ${cfg.gradient} flex items-center justify-center flex-shrink-0`}>
+                <i className={`${cat.icon} text-white text-sm`}></i>
+              </div>
+              <div>
+                <div className="text-lg font-bold text-gray-900">{cat.skills.length}</div>
+                <div className="text-xs text-gray-500 font-medium truncate">{cat.category}</div>
+              </div>
             </div>
-            <div>
-              <div className="text-lg font-bold text-gray-900">{stat.value}</div>
-              <div className="text-xs text-gray-500 font-medium">{stat.label}</div>
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
