@@ -5,7 +5,7 @@ export const profileData = {
 
   name: "Karan M.L",
   title: "M.Tech Integrated Student",
-  designation: "M.Tech Integrated Student",
+  designation: "Software engineer | AI/ML Enthusiast | Full Stack Developer",
   departmentName: "Computer Science & Engineering",
   tagline: "AI/ML Enthusiast | Full Stack Developer | Backend Architect | Open Source Builder",
 
