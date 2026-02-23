@@ -14,7 +14,7 @@ export const profileData = {
   profileImage: "/karan.png",
 
   contact: {
-    phone: "+91 744890702",
+    phone: "+91 7448907020",
     emails: ["mlkaran2004@gmail.com"],
     location: "Erode, Tamil Nadu"
   },
