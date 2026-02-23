@@ -15,6 +15,19 @@ import { profileData } from './data';
 function App() {
   const [activeSection, setActiveSection] = useState('personal');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem('theme') === 'dark';
+  });
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [darkMode]);
 
   const handleNavigate = (sectionId) => {
     setActiveSection(sectionId);
@@ -52,7 +65,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative dark:bg-slate-900 transition-colors duration-300">
       <Sidebar
         data={profileData}
         activeSection={activeSection}
@@ -71,9 +84,11 @@ function App() {
         <Header
           name={profileData.name}
           onMenuClick={() => setMobileMenuOpen(true)}
+          darkMode={darkMode}
+          onToggleTheme={() => setDarkMode(prev => !prev)}
         />
 
-        <div className="px-4 md:px-8 lg:px-12 py-8 max-w-7xl space-y-8">
+        <div className="px-4 md:px-8 lg:px-12 py-8 max-w-7xl space-y-8 dark:text-slate-100">
           {/* Profile Section */}
           <PersonalDetails data={profileData} />
 

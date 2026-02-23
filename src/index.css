@@ -18,7 +18,30 @@ body {
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
 }
+
+/* ===== DARK MODE ===== */
+.dark body {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.dark .radiant-card {
+  background: #1e293b !important;
+  border-color: #334155 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+}
+
+.dark .radiant-card:hover {
+  background: #253347 !important;
+  border-color: #475569 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* scrollbar dark */
+.dark ::-webkit-scrollbar-track { background: #1e293b; }
+.dark ::-webkit-scrollbar-thumb { background: #3b82f6; }
 
 body::before {
   content: '';
@@ -102,3 +125,29 @@ html {
 .animate-border {
   animation: borderGlow 3s ease infinite;
 }
+
+/* ===== DARK MODE TEXT & COMPONENT OVERRIDES ===== */
+.dark .text-gray-900 { color: #f1f5f9 !important; }
+.dark .text-gray-800 { color: #e2e8f0 !important; }
+.dark .text-gray-700 { color: #cbd5e1 !important; }
+.dark .text-gray-600 { color: #94a3b8 !important; }
+.dark .text-gray-500 { color: #64748b !important; }
+
+.dark .bg-gray-50  { background-color: #1e293b !important; }
+.dark .bg-gray-100 { background-color: #253347 !important; }
+.dark .bg-gray-200 { background-color: #334155 !important; }
+.dark .bg-white    { background-color: #1e293b !important; }
+
+.dark .border-gray-100 { border-color: #334155 !important; }
+.dark .border-gray-200 { border-color: #475569 !important; }
+
+/* Experience / project cards */
+.dark .bg-gradient-to-r.from-blue-50   { background: linear-gradient(to right, #1e3a5f, #1e293b) !important; }
+.dark .bg-blue-50   { background-color: #1e3a5f !important; }
+.dark .bg-purple-50 { background-color: #2d1b69 !important; }
+.dark .bg-amber-50  { background-color: #3d2a00 !important; }
+
+/* Input borders */
+.dark .border-blue-100   { border-color: #1e40af !important; }
+.dark .border-purple-100 { border-color: #4c1d95 !important; }
+.dark .border-amber-100  { border-color: #78350f !important; }
