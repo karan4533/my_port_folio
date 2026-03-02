@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
 const categoryConfig = [
-  { gradient: "from-blue-500 to-blue-700",     light: "bg-blue-50",   border: "border-blue-200",   pill: "bg-blue-100 text-blue-800 hover:bg-blue-600 hover:text-white",   dot: "bg-blue-500" },
-  { gradient: "from-violet-500 to-violet-700", light: "bg-violet-50", border: "border-violet-200", pill: "bg-violet-100 text-violet-800 hover:bg-violet-600 hover:text-white", dot: "bg-violet-500" },
-  { gradient: "from-emerald-500 to-emerald-700",light: "bg-emerald-50",border: "border-emerald-200",pill: "bg-emerald-100 text-emerald-800 hover:bg-emerald-600 hover:text-white", dot: "bg-emerald-500" },
-  { gradient: "from-cyan-500 to-cyan-700",     light: "bg-cyan-50",   border: "border-cyan-200",   pill: "bg-cyan-100 text-cyan-800 hover:bg-cyan-600 hover:text-white",   dot: "bg-cyan-500" },
-  { gradient: "from-orange-500 to-orange-700", light: "bg-orange-50", border: "border-orange-200", pill: "bg-orange-100 text-orange-800 hover:bg-orange-600 hover:text-white", dot: "bg-orange-500" },
-  { gradient: "from-pink-500 to-pink-700",     light: "bg-pink-50",   border: "border-pink-200",   pill: "bg-pink-100 text-pink-800 hover:bg-pink-600 hover:text-white",   dot: "bg-pink-500" },
-  { gradient: "from-indigo-500 to-indigo-700", light: "bg-indigo-50", border: "border-indigo-200", pill: "bg-indigo-100 text-indigo-800 hover:bg-indigo-600 hover:text-white", dot: "bg-indigo-500" },
-  { gradient: "from-teal-500 to-teal-700",     light: "bg-teal-50",   border: "border-teal-200",   pill: "bg-teal-100 text-teal-800 hover:bg-teal-600 hover:text-white",   dot: "bg-teal-500" },
+  { gradient: "from-blue-500 to-blue-700",     light: "bg-blue-50 dark:bg-blue-950",   border: "border-blue-200",   pill: "bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-white hover:bg-blue-600 hover:text-white",   dot: "bg-blue-500" },
+  { gradient: "from-violet-500 to-violet-700", light: "bg-violet-50 dark:bg-violet-950", border: "border-violet-200", pill: "bg-violet-100 text-violet-800 dark:bg-violet-800 dark:text-white hover:bg-violet-600 hover:text-white", dot: "bg-violet-500" },
+  { gradient: "from-emerald-500 to-emerald-700",light: "bg-emerald-50 dark:bg-emerald-950",border: "border-emerald-200",pill: "bg-emerald-100 text-emerald-800 dark:bg-emerald-800 dark:text-white hover:bg-emerald-600 hover:text-white", dot: "bg-emerald-500" },
+  { gradient: "from-cyan-500 to-cyan-700",     light: "bg-cyan-50 dark:bg-cyan-950",   border: "border-cyan-200",   pill: "bg-cyan-100 text-cyan-800 dark:bg-cyan-800 dark:text-white hover:bg-cyan-600 hover:text-white",   dot: "bg-cyan-500" },
+  { gradient: "from-orange-500 to-orange-700", light: "bg-orange-50 dark:bg-orange-950", border: "border-orange-200", pill: "bg-orange-100 text-orange-800 dark:bg-orange-800 dark:text-white hover:bg-orange-600 hover:text-white", dot: "bg-orange-500" },
+  { gradient: "from-pink-500 to-pink-700",     light: "bg-pink-50 dark:bg-pink-950",   border: "border-pink-200",   pill: "bg-pink-100 text-pink-800 dark:bg-pink-800 dark:text-white hover:bg-pink-600 hover:text-white",   dot: "bg-pink-500" },
+  { gradient: "from-indigo-500 to-indigo-700", light: "bg-indigo-50 dark:bg-indigo-950", border: "border-indigo-200", pill: "bg-indigo-100 text-indigo-800 dark:bg-indigo-800 dark:text-white hover:bg-indigo-600 hover:text-white", dot: "bg-indigo-500" },
+  { gradient: "from-teal-500 to-teal-700",     light: "bg-teal-50 dark:bg-teal-950",   border: "border-teal-200",   pill: "bg-teal-100 text-teal-800 dark:bg-teal-800 dark:text-white hover:bg-teal-600 hover:text-white",   dot: "bg-teal-500" },
 ];
 
 const TechSkills = ({ techSkills }) => {

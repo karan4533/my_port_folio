@@ -8,8 +8,8 @@ export default {
   safelist: [
     // TechSkills categoryConfig dynamic classes — must be safelisted to avoid JIT purging
     {
-      pattern: /^(bg|border|text|from|to|hover:bg)-(blue|violet|emerald|cyan|orange|pink|indigo|teal)-(50|100|200|500|600|700|800)$/,
-      variants: ['hover'],
+      pattern: /^(bg|border|text|from|to)-(blue|violet|emerald|cyan|orange|pink|indigo|teal)-(50|100|200|500|600|700|800|950)$/,
+      variants: ['hover', 'dark'],
     },
   ],
   theme: {
