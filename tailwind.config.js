@@ -5,6 +5,13 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [
+    // TechSkills categoryConfig dynamic classes — must be safelisted to avoid JIT purging
+    {
+      pattern: /^(bg|border|text|from|to|hover:bg)-(blue|violet|emerald|cyan|orange|pink|indigo|teal)-(50|100|200|500|600|700|800)$/,
+      variants: ['hover'],
+    },
+  ],
   theme: {
     extend: {
       colors: {
@@ -12,12 +19,9 @@ export default {
         'primary': '#1e40af',
         'primary-dark': '#1e3a8a',
         'accent': '#2563eb',
-        'cyan': '#2563eb',
         'dark-bg': '#002855',
         'text-white': '#ffffff',
         'text-gray': '#6b7280',
-        'violet': '#1e40af',
-        'violet-light': '#3b82f6',
         'light-blue': '#2563eb',
         'sky-blue': '#3b82f6',
       },
