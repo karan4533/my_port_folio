@@ -98,7 +98,7 @@ const Sidebar = ({ data, activeSection, onNavigate }) => {
 
       {/* ── Footer ── */}
       <div className="px-6 py-4 border-t border-white/10">
-        <p className="text-[10px] text-white/30 text-center">© {new Date().getFullYear()} {data.name}</p>
+        <p className="text-[10px] text-white/30 text-center">{'\u00A9'} {new Date().getFullYear()} {data.name}</p>
       </div>
     </div>
   );
