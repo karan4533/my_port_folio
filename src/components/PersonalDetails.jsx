@@ -16,11 +16,11 @@ const PersonalDetails = ({ data }) => {
         <div className="grid md:grid-cols-4 gap-8 items-center">
           {/* Profile Image */}
           <div className="md:col-span-1 flex justify-center">
-            <div className="relative">
+            <div className="relative overflow-hidden rounded-2xl">
               <img
                 src={data.profileImage}
                 alt={data.name}
-                className="rounded-2xl shadow-md w-full max-w-[220px] h-auto object-cover border-2 border-gray-200"
+                className="rounded-2xl shadow-md w-full max-w-[220px] h-auto object-cover border-2 border-gray-200 transition-transform duration-500 hover:scale-110"
               />
             </div>
           </div>

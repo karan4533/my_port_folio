@@ -49,7 +49,7 @@ const IndustryOverview = ({ data }) => {
       {/* Core Industry Expertise */}
       <motion.div {...fadeUp(0.1)} className="radiant-card p-6 md:p-8">
         <div className="flex items-center mb-6">
-          <div className="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center mr-4 shadow-md">
+          <div className="w-12 h-12 rounded-xl bg-blue-600 items-center justify-center mr-4 shadow-md hidden">
             <i className="fas fa-star text-white text-xl"></i>
           </div>
           <h3 className="text-2xl font-bold text-gray-900">Areas of Focus</h3>
