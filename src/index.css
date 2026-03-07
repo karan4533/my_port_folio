@@ -13,7 +13,10 @@
 body {
   margin: 0;
   padding: 0;
-  background: #ffffff;
+  background: #f8faff;
+  background-image:
+    radial-gradient(ellipse at 0% 0%, rgba(219,234,254,0.55) 0%, transparent 48%),
+    radial-gradient(ellipse at 100% 100%, rgba(237,233,254,0.35) 0%, transparent 50%);
   background-attachment: fixed;
   min-height: 100vh;
   position: relative;
@@ -23,22 +26,25 @@ body {
 
 /* ===== DARK MODE ===== */
 .dark body {
-  background: #111827;
+  background: #0c1527;
+  background-image:
+    radial-gradient(ellipse at 0% 0%, rgba(59,130,246,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 100% 100%, rgba(99,102,241,0.06) 0%, transparent 55%);
   color: #e2e8f0;
 }
 
 .dark .radiant-card {
-  background: #1f2937 !important;
-  border-color: #374151 !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+  background: #112240 !important;
+  border-color: rgba(59,130,246,0.15) !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.04) !important;
   will-change: transform;
 }
 
 .dark .radiant-card:hover {
-  background: #263347 !important;
-  border-color: #3b82f6 !important;
-  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15), 0 2px 8px rgba(0, 0, 0, 0.4) !important;
-  transform: translateY(-2px) !important;
+  background: #162d50 !important;
+  border-color: rgba(59,130,246,0.45) !important;
+  box-shadow: 0 20px 60px rgba(59, 130, 246, 0.22), 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+  transform: translateY(-3px) !important;
 }
 
 /* scrollbar dark */
@@ -93,27 +99,27 @@ html {
   box-shadow: 0 0 5px rgba(30, 64, 175, 0.3);
 }
 
-/* Radiant Card Effects - Professional Clean Style */
+/* Radiant Card Effects - Modern 2025 */
 .radiant-card {
   background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+  border: 1px solid rgba(59,130,246,0.1);
+  border-radius: 18px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 20px rgba(59,130,246,0.07);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
   will-change: transform;
 }
 
 .radiant-card:hover {
   background: #ffffff;
-  border-color: #bfdbfe;
-  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
-  transform: translateY(-2px);
+  border-color: rgba(59,130,246,0.32);
+  box-shadow: 0 20px 60px rgba(59, 130, 246, 0.15), 0 4px 16px rgba(0, 0, 0, 0.06);
+  transform: translateY(-3px);
 }
 
 /* Active press effect */
 .radiant-card:active {
   transform: translateY(0px) scale(0.99);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 /* Glowing Text - Minimal Professional Effect */
@@ -142,10 +148,10 @@ html {
 .dark .text-gray-600 { color: #94a3b8 !important; }
 .dark .text-gray-500 { color: #94a3b8 !important; }
 
-.dark .bg-gray-50  { background-color: #1f2937 !important; }
-.dark .bg-gray-100 { background-color: #263347 !important; }
-.dark .bg-gray-200 { background-color: #374151 !important; }
-.dark .bg-white    { background-color: #1f2937 !important; }
+.dark .bg-gray-50  { background-color: #0f1d35 !important; }
+.dark .bg-gray-100 { background-color: #112240 !important; }
+.dark .bg-gray-200 { background-color: #1a3060 !important; }
+.dark .bg-white    { background-color: #112240 !important; }
 
 .dark .border-gray-100 { border-color: #334155 !important; }
 .dark .border-gray-200 { border-color: #475569 !important; }
@@ -218,3 +224,50 @@ html {
 .dark .border-amber-200   { border-color: #4d3500 !important; }
 .dark .border-amber-300   { border-color: #92400e !important; }
 .dark .border-green-200   { border-color: #14532d !important; }
+
+/* ===== UTILITY: Gradient Text ===== */
+.gradient-text {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.dark .gradient-text {
+  background: linear-gradient(135deg, #93c5fd 0%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== UTILITY: Pill Chip ===== */
+.pill-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  background: rgba(59,130,246,0.07);
+  border: 1px solid rgba(59,130,246,0.2);
+  color: #2563eb;
+  transition: all 0.22s ease;
+  cursor: pointer;
+  user-select: none;
+}
+.pill-chip:hover {
+  background: #3b82f6;
+  color: #ffffff;
+  border-color: #3b82f6;
+  transform: scale(1.05) translateY(-1px);
+  box-shadow: 0 6px 18px rgba(59,130,246,0.35);
+}
+.dark .pill-chip {
+  background: rgba(59,130,246,0.1);
+  border-color: rgba(59,130,246,0.25);
+  color: #93c5fd;
+}
+.dark .pill-chip:hover {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}

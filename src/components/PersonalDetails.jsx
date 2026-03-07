@@ -12,7 +12,7 @@ const PersonalDetails = ({ data }) => {
   return (
     <section id="personal" className="space-y-6">
       {/* Hero Card with Profile */}
-      <motion.div {...fadeUp(0)} className="radiant-card p-8">
+      <motion.div {...fadeUp(0)} className="radiant-card p-8" style={{ background: 'linear-gradient(135deg, #ffffff 0%, #f0f7ff 60%, #f5f3ff 100%)' }}>
         <div className="grid md:grid-cols-4 gap-8 items-center">
           {/* Profile Image */}
           <div className="md:col-span-1 flex justify-center">
@@ -20,14 +20,14 @@ const PersonalDetails = ({ data }) => {
               <img
                 src={data.profileImage}
                 alt={data.name}
-                className="rounded-2xl shadow-md w-full max-w-[220px] h-auto object-cover border-2 border-gray-200 transition-transform duration-500 hover:scale-110"
+                className="rounded-2xl shadow-xl w-full max-w-[220px] h-auto object-cover border-2 border-blue-100 ring-4 ring-blue-100/40 transition-transform duration-500 hover:scale-110"
               />
             </div>
           </div>
 
           {/* Profile Info */}
           <div className="md:col-span-3 text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3">
+            <h1 className="text-4xl md:text-5xl font-bold gradient-text mb-3">
               {data.name}
             </h1>
             <p className="text-xl text-primary font-bold mb-2">
@@ -42,7 +42,7 @@ const PersonalDetails = ({ data }) => {
 
             {/* Brand Statement */}
             {data.brandStatement && (
-              <div className="p-4 rounded-xl bg-blue-50 border-l-4 border-blue-600 mb-6">
+              <div className="p-4 rounded-xl mb-6" style={{ background: 'rgba(59,130,246,0.06)', borderLeft: '4px solid #3b82f6' }}>
                 <p className="text-gray-700 font-medium text-sm leading-relaxed">
                   {data.brandStatement}
                 </p>
@@ -53,7 +53,8 @@ const PersonalDetails = ({ data }) => {
             <div className="flex flex-wrap gap-3 justify-center md:justify-start">
               <a
                 href={`mailto:${data.contact.emails[0]}?subject=Collaboration Inquiry&body=Hi ${data.name},%0A%0AI'd love to collaborate with you on...`}
-                className="px-6 py-3 bg-primary hover:bg-primary-dark text-white rounded-lg font-semibold transition-all duration-200 inline-flex items-center hover:scale-105 hover:shadow-lg active:scale-95"
+                className="px-6 py-3 text-white rounded-xl font-semibold transition-all duration-200 inline-flex items-center hover:scale-105 hover:brightness-110 active:scale-95 shadow-lg"
+                style={{ background: 'linear-gradient(135deg, #1e40af, #3b82f6)', boxShadow: '0 4px 15px rgba(59,130,246,0.4)' }}
               >
                 <i className="fas fa-handshake mr-2"></i>
                 Collaborate with me
@@ -76,7 +77,7 @@ const PersonalDetails = ({ data }) => {
               {...fadeUp(index * 0.08)}
               className="radiant-card p-6 text-center transition-all duration-200 group cursor-pointer hover:scale-105 hover:shadow-xl"
             >
-              <div className="w-14 h-14 mx-auto mb-3 rounded-xl bg-accent flex items-center justify-center shadow-sm">
+              <div className="w-14 h-14 mx-auto mb-3 rounded-xl flex items-center justify-center shadow-md" style={{ background: 'linear-gradient(135deg, #2563eb 0%, #3b82f6 100%)' }}>
                 <i className={`${stat.icon} text-2xl text-white`}></i>
               </div>
               <div className="text-3xl font-bold text-gray-900 mb-1">
@@ -166,11 +167,8 @@ const PersonalDetails = ({ data }) => {
         </h3>
         <div className="flex flex-wrap gap-3">
           {data.interests.map((interest, index) => (
-            <div
-              key={index}
-              className="px-4 py-2 bg-gray-100 border border-gray-300 rounded-full hover:bg-primary hover:text-white hover:border-primary transition-all duration-200 cursor-pointer"
-            >
-              <span className="text-gray-700 font-medium text-sm">{interest}</span>
+            <div key={index} className="pill-chip">
+              {interest}
             </div>
           ))}
         </div>

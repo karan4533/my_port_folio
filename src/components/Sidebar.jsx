@@ -14,13 +14,13 @@ const Sidebar = ({ data, activeSection, onNavigate }) => {
   const getItemColor = (item) => groupColors[item.group] || defaultColor;
 
   return (
-    <div className="fixed left-0 top-0 h-screen w-72 bg-sidebar text-white overflow-y-auto z-50 hidden lg:flex flex-col">
+    <div className="fixed left-0 top-0 h-screen w-72 text-white overflow-y-auto z-50 hidden lg:flex flex-col" style={{ background: 'linear-gradient(170deg, #0c1527 0%, #0f1f3d 50%, #111827 100%)' }}>
 
       {/* ── Profile Header ── */}
-      <div className="px-6 pt-7 pb-5 border-b border-white/10 flex flex-col items-center text-center gap-3">
+      <div className="px-6 pt-7 pb-5 border-b border-white/10 flex flex-col items-center text-center gap-3 relative" style={{ background: 'radial-gradient(ellipse at 50% 0%, rgba(59,130,246,0.2) 0%, transparent 65%)' }}>
         {/* Icon avatar */}
         <div className="relative">
-          <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center shadow-lg">
+          <div className="w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg" style={{ background: 'linear-gradient(135deg, rgba(59,130,246,0.35) 0%, rgba(99,102,241,0.25) 100%)', border: '1px solid rgba(59,130,246,0.4)' }}>
             <i className="fas fa-code text-2xl text-white"></i>
           </div>
           <span className="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-400 rounded-full border-2 border-sidebar shadow" title="Available for opportunities"></span>

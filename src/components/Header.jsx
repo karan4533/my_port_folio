@@ -2,7 +2,15 @@ import React from 'react';
 
 const Header = ({ name, onMenuClick, darkMode, onToggleTheme }) => {
   return (
-    <div className="bg-white dark:bg-slate-900 shadow-sm sticky top-0 z-40 border-b border-gray-200 dark:border-slate-700 transition-colors duration-300">
+    <div
+      className="sticky top-0 z-40 border-b transition-colors duration-300"
+      style={{
+        background: darkMode ? 'rgba(12,21,39,0.92)' : 'rgba(248,250,255,0.92)',
+        borderBottomColor: darkMode ? 'rgba(255,255,255,0.08)' : 'rgba(219,234,254,0.7)',
+        backdropFilter: 'blur(14px)',
+        WebkitBackdropFilter: 'blur(14px)',
+      }}
+    >
       <div className="px-6 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-4">
           {/* Mobile Menu Button */}
@@ -13,7 +21,14 @@ const Header = ({ name, onMenuClick, darkMode, onToggleTheme }) => {
             <i className="fas fa-bars text-lg"></i>
           </button>
           <div>
-            <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">{name}</h2>
+            <h2 className="text-xl md:text-2xl font-bold" style={{
+              background: darkMode
+                ? 'linear-gradient(135deg, #93c5fd 0%, #60a5fa 100%)'
+                : 'linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+            }}>{name}</h2>
             <p className="text-xs text-primary font-semibold">Portfolio</p>
           </div>
         </div>
